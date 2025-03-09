@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Running;
 
 namespace AlgorithmEfficiency
 {
@@ -59,7 +61,7 @@ namespace AlgorithmEfficiency
                 mergedIndex++;
             }
         }
-
+        [Benchmark]
         public void SortArray(int left, int right)
         {
             if (left < right)
